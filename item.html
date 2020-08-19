@@ -282,17 +282,17 @@
             </div>
         </div>
         <div class="item_detail">
-            <div class="item_cont">
+            <div class="item_cont" id="item_cont">
                 <div class="cont">
                     <!-- <div>
                         <h2>상세정보</h2>
                     </div> -->
                     <ul class="prdmenu">
                         <li class="select">
-                            <a href="#">상세정보</a>
+                            <a href="#item_cont">상세정보</a>
                         </li>
                         <li>
-                            <a href="#">관련상품</a>
+                            <a href="#related">관련상품</a>
                         </li>
                         <li>
                             <a href="#">리뷰</a>
@@ -310,17 +310,17 @@
             </div>
 
             <!-- 관련상품 -->
-            <div class="related">
+            <div class="related" id="related">
                 <div class="item_related">
                     <ul class="prdmenu">
                         <li>
-                            <a href="#">상세정보</a>
+                            <a href="#item_cont">상세정보</a>
                         </li>
                         <li class="select">
-                            <a href="#">관련상품</a>
+                            <a href="#related">관련상품</a>
                         </li>
                         <li>
-                            <a href="#">리뷰</a>
+                            <a href="#item_review">리뷰</a>
                         </li>
                     </ul>
                     <div class="item_related_list">
@@ -373,17 +373,17 @@
             </div>
 
             <!-- 리뷰 -->
-            <div class="item_review">
+            <div class="item_review" id="item_review">
                 <div class="review_cont">
                     <ul class="prdmenu">
                         <li>
-                            <a href="#">상세정보</a>
+                            <a href="#item_cont">상세정보</a>
                         </li>
                         <li>
-                            <a href="#">관련상품</a>
+                            <a href="#related">관련상품</a>
                         </li>
                         <li class="select">
-                            <a href="#">리뷰</a>
+                            <a href="#item_review">리뷰</a>
                         </li>
                     </ul>
                     <div class="review_box">
@@ -457,6 +457,13 @@
         </div>
     </div>
 
+
+    <!-- 클릭한 탭으로 이동 -->
+    <script>
+        $('.prdmenu li').click(function(){
+            $(this)
+        })
+    </script>
     
     <script>
         $('.review_detail').click(function(){
