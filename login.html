@@ -41,13 +41,6 @@
                     </button>
                 </div>
 
-                <script>
-                    $('.btn').click(function(){
-                        var cate = $(this).attr('category_wrap')
-                        $('.' + cate).addClass('open')
-                    })    
-                </script>
-
                 <ul class="gnb">
                     <li><a href="outer.html">아우터</a></li>
                     <li><a href="#">상의</a></li>
@@ -111,10 +104,15 @@
         </div>
     </div>
 
+    <!-- 메뉴 토글 -->
     <script>
-        $('.btn').click(function(){
-            $(this).toggleClass('active')
-            $('.category_wrap').toggleClass('open')
+        $(document).ready(function(){
+            $('.btn').click(function(){
+            // $(this).toggleClass('active')
+            // $('.category_wrap').toggleClass('open')
+                $(this).toggleClass('active')
+                $('.category_wrap').slideToggle('slow')
+            })
         })
     </script>
 
@@ -142,7 +140,10 @@
                                     <div class="login_input">
                                         <input type="password" placeholder="비밀번호" title="아이디 입력" class="password">
                                     </div>
-                                    <button class="login_btn">로그인</button>
+                                    <a href="login_index.html">
+                                        <span class="login_btn">로그인</span>
+                                    </a>
+                                    
                                     <div class="member_tab">
                                         <ul>
                                             <li><a href="#">아이디 찾기</a></li>

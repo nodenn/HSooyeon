@@ -84,13 +84,13 @@ body{
     width: inherit;
 }
 .inner_nav{
-    float: right;
+    float: left;
     position: absolute;
     right: 0;
     top: 40px;
 }
 .inner_nav li{
-    float: right;
+    float: left;
     text-align: center;
     margin-right: 15px;
 }
@@ -270,6 +270,8 @@ body{
 
 .slide_container{
     height: 500px;
+    width: 1200px;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
@@ -329,9 +331,10 @@ input[id=tab3]:checked ~ .slides .slide_btn label[for=tab3]{
 
 .inner_section{
     /* margin-bottom: 20px; */
-    margin: 0;
+    margin: 0 auto;
     position: relative;
     display: block;
+    width: 1300px;
 }
 .item_title{
     display: block;
@@ -344,6 +347,9 @@ input[id=tab3]:checked ~ .slides .slide_btn label[for=tab3]{
     margin: 0;
     margin-top: 5px;
 }
+
+
+/* slide */
 
 .slide{
     position: relative;
@@ -361,6 +367,19 @@ input[id=tab3]:checked ~ .slides .slide_btn label[for=tab3]{
     display: block;
     text-align: center; */
     display: none;
+}
+.item_list.active{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.item_list li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.item_list{
+    position: absolute;
 }
 .item_list.active{
     position: relative;
@@ -539,19 +558,19 @@ input[id=tab3]:checked ~ .slides .slide_btn label[for=tab3]{
 .move_btn button{
     position: absolute;
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     top: 57%;
     transform: translateY(50%);
-    font-size: 40px;
+    font-size: 35px;
     cursor: pointer;
     color: #333;
 }
 .move_btn .left_btn{
-    left: 80px;
+    left: 7px;
 }
 .move_btn .right_btn{
-    right: 80px;
+    right: 7px;
 }
 
 
@@ -611,12 +630,12 @@ input[id=tab3]:checked ~ .slides .slide_btn label[for=tab3]{
     padding-top: 40px;
     font-size: 13px;
 }
-.footer_wrap div{
+.footer_wrap>div{
     float: left;
     margin-right: 30px;
 }
 .footer_wrap .info{
-    width: 300px;
+    width: 500px;
 }
 .footer_wrap .account_info,
 .footer_wrap .cs_center{
@@ -634,4 +653,46 @@ input[id=tab3]:checked ~ .slides .slide_btn label[for=tab3]{
 }
 .footer_wrap .cs_center p{
     /* margin-top: 5px; */
+}
+
+.footer_wrap .sns{
+    float: right;
+}
+.footer_wrap .sns a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+.footer_wrap .sns a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.footer_wrap .sns a:hover::before{
+    height: 100%;
+}
+.footer_wrap .sns a:nth-child(1)::before{
+    background: #3b5999;
+}
+.footer_wrap .sns a:nth-child(2)::before{
+    background: #e4405f;
+}
+.footer_wrap .sns a .fa{
+    position: relative;
+    transition: 0.5s;
+}
+.footer_wrap .sns a:hover .fa{
+    color: #fff;
 }

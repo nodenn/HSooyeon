@@ -14,7 +14,7 @@
 /* 상품 이미지 미리보기 */
 .detail_img{
     position: relative;
-    width: 550px;
+    width: 500px;
     float: left;
     left: 50px;
 }
@@ -109,7 +109,7 @@
 .info_etc_detail{
     float: left;
     width: 400px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .info_etc_detail dl{
     display: table;
@@ -215,10 +215,9 @@
 /* 구매버튼 */
 .btn_area{
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
     display: inline-block;
     width: 500px;
-    left: 100px;
 }
 .btn_area span button{
     width: 220px;
@@ -257,21 +256,34 @@
     margin: 0 auto;
 }
 .cont{
-    padding-top: 150px;
+    padding-top: 100px;
     text-align: center;
 }
-.cont div>h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-.cont hr{
-    border: 0;
-    width: 100px;
+.prdmenu{
+    width: 100%;
     margin: 0 auto;
-    height: 1px;
+    display: table;
+    table-layout: fixed;
+    border: 1px solid #000;
+    margin-bottom: 40px;
+}
+.prdmenu li{
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    border-right: 1px solid #000;
+    font-size: 14px;
+}
+.prdmenu li:last-child{
+    border-right: 0;
+}
+.prdmenu li.select{
+    color: #fff;
     background: #000;
-    margin-bottom: 50px;
+}
+.prdmenu li a{
+    display: block;
+    padding: 7px 0;
 }
 
 
@@ -280,15 +292,6 @@
     width: 1200px;
     padding-top: 120px;
     margin: 0 auto;
-}
-.related h3{
-    font-size: 24px;
-    font-weight: 500;
-    margin: 30px auto;
-    padding-bottom: 5px;
-    width: 100px;
-    text-align: center;
-    border-bottom: 1px solid #000;
 }
 .item_related_list ul{
     display: table;
@@ -324,48 +327,40 @@
     padding-top: 80px;
     width: 100%;
 }
-.item_review h3{
-    font-size: 24px;
-    font-weight: 500;
-    margin: 30px auto;
-    padding-bottom: 5px;
-    width: 100px;
-    text-align: center;
-    border-bottom: 1px solid #000;
-}
 
 .review_sort{
     position: relative;
     margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 7px 20px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
     height: 40px;
+}
+.sorting{
+    overflow: hidden;
+    display: inline-block;
+}
+.sorting ul{
+    float: left;
+    line-height: 14px;
 }
 .sorting ul li{
     display: inline-block;
     font-size: 14px;
+    margin-right: 12px;
 }
 .sorting ul li.selected{
     font-weight: 500;
 }
-.sorting ul li:nth-child(2):before{
-    content: '';
-    display: inline-block;
-    margin: 0 15px;
-    width: 1px;
-    height: 12px;
-    background: #ccc;
-}
 .review_write{
+    overflow: hidden;
 }
 .write_btn{
-    position: absolute;
     right: 20px;
-    top: 5px;
+    bottom: 5px;
+    position: absolute;
     font-size: 14px;
     display: block;
-    width: 100px;
-    height: 30px;
+    padding: 5px 10px;
     background: #000;
     color: #fff;
     cursor: pointer;

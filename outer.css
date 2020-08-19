@@ -321,9 +321,10 @@ body{
     margin-top: 1px 0;
 }
 
-/* Page Items */
-.page_items{
+/* Page Item */
+.page_item{
     margin-top: 30px;
+    overflow: hidden;
 }
 
 /* Page Slide */
@@ -467,7 +468,7 @@ input[id=tab3]:checked ~ .slide_btn label[for=tab3]{
 }
 .sort.btn label{
     position: relative;
-    padding: 0 10px;
+    margin-left: 12px;
     cursor: pointer;
 }
 
@@ -539,6 +540,36 @@ input[id=tab3]:checked ~ .slide_btn label[for=tab3]{
 }
 
 
+/* Pagenation */
+.center {
+    text-align: center;
+    margin-top: 60px;
+  }
+.pagination {
+    display: inline-block;
+    margin: 0 auto;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+  
+.pagination a.active {
+    background-color: tomato;
+    color: #fff;
+    border: 1px solid tomato;
+}
+  
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+
 /* Footer */
 .footer{
     margin-top: 100px;
@@ -586,7 +617,7 @@ input[id=tab3]:checked ~ .slide_btn label[for=tab3]{
     margin-right: 30px;
 }
 .footer_wrap .info{
-    width: 300px;
+    width: 500px;
 }
 .footer_wrap .account_info,
 .footer_wrap .cs_center{
@@ -604,4 +635,46 @@ input[id=tab3]:checked ~ .slide_btn label[for=tab3]{
 }
 .footer_wrap .cs_center p{
     /* margin-top: 5px; */
+}
+
+.footer_wrap .sns{
+    float: right;
+}
+.footer_wrap .sns a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+.footer_wrap .sns a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.footer_wrap .sns a:hover::before{
+    height: 100%;
+}
+.footer_wrap .sns a:nth-child(1)::before{
+    background: #3b5999;
+}
+.footer_wrap .sns a:nth-child(2)::before{
+    background: #e4405f;
+}
+.footer_wrap .sns a .fa{
+    position: relative;
+    transition: 0.5s;
+}
+.footer_wrap .sns a:hover .fa{
+    color: #fff;
 }
