@@ -1,0 +1,40 @@
+/* Containter */
+.container{
+    overflow: hidden;
+}
+.content{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.page_title{
+    padding: 50px 0 60px;
+    text-align: center;
+}
+.page_title h2{
+    font-size: 32px;
+    font-weight: 500;
+    color: #333;
+}
+
+.my_menu{
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;    
+    border: 1px solid #000;
+    margin-bottom: 40px;
+}
+.my_menu li{
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+.my_menu li:last-child{
+    border: 0;
+}
+.my_menu li a{
+    display: block;
+    padding: 7px 0;
+}
